@@ -142,3 +142,11 @@ linear-gradient(135deg,#1ddfc0,#1468bc);box-shadow:0 0 90px rgba(88,230,255,.22)
 .ad-slot.has-live-ad.ad-rectangle{min-height:280px;width:100%}
 .ad-zone.has-live-ad-zone .ad-note{color:#66849a}
 @media(max-width:760px){.ad-slot.has-live-ad{padding:8px 6px 10px}.ad-slot.has-live-ad.ad-leaderboard{min-height:90px}.ad-slot.has-live-ad.ad-rectangle{min-height:120px}.ad-live-label{margin-left:2px}}
+
+/* VISIBLE ADSENSE PLACEHOLDERS V7 */
+.has-live-ad{position:relative;display:block!important;min-height:150px!important;padding:34px 14px 14px!important;border:1px solid rgba(88,230,255,.22)!important;border-radius:20px!important;background:linear-gradient(135deg,rgba(7,20,36,.92),rgba(13,34,52,.82))!important;box-shadow:inset 0 0 40px rgba(88,230,255,.035),0 12px 30px rgba(0,0,0,.14)!important;overflow:hidden!important}
+.has-live-ad:after{content:"Annonce AdSense";position:absolute;inset:34px 12px 12px;display:grid;place-items:center;color:#7895aa;font-size:12px;font-weight:750;letter-spacing:.05em;border:1px dashed rgba(145,188,211,.14);border-radius:14px;pointer-events:none;z-index:0}
+.has-live-ad .ad-live-label{position:absolute!important;top:11px!important;left:14px!important;z-index:3!important;font-size:10px!important;font-weight:900!important;letter-spacing:.16em!important;text-transform:uppercase!important;color:#8db2c8!important}
+.has-live-ad .adsbygoogle{position:relative;z-index:2;display:block!important;width:100%!important;min-height:100px}
+.has-live-ad.ad-filled:after{display:none!important}.side .has-live-ad{min-height:300px!important}.side .has-live-ad .adsbygoogle{min-height:250px}
+@media(max-width:760px){.has-live-ad{min-height:118px!important;padding:32px 8px 10px!important}.has-live-ad:after{inset:32px 8px 10px}.has-live-ad .adsbygoogle{min-height:76px}.side .has-live-ad{min-height:160px!important}.side .has-live-ad .adsbygoogle{min-height:110px}}

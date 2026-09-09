@@ -219,3 +219,7 @@ document.addEventListener('DOMContentLoaded',injectAdvancedArgumentUpgrades);
 
 function bindRemotePhotoFallbacks(){document.querySelectorAll('.photo-proof-card img').forEach(img=>{if(img.dataset.bound)return;img.dataset.bound='1';img.addEventListener('error',()=>{img.style.display='none';const fb=img.nextElementSibling;if(fb)fb.hidden=false},{once:true})})}
 document.addEventListener('DOMContentLoaded',bindRemotePhotoFallbacks);
+
+// Visible AdSense placeholder: hide the pending marker when Google fills a slot.
+function watchAdSenseFill(){document.querySelectorAll('.has-live-ad .adsbygoogle').forEach(ad=>{const wrap=ad.closest('.has-live-ad');if(!wrap)return;const sync=()=>wrap.classList.toggle('ad-filled',ad.getAttribute('data-ad-status')==='filled');sync();new MutationObserver(sync).observe(ad,{attributes:true,attributeFilter:['data-ad-status']});});}
+document.addEventListener('DOMContentLoaded',watchAdSenseFill);
