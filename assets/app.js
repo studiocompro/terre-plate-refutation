@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded',injectTranslationStatus);
 
 // ===== V4: support + interactive science labs =====
 function doSearch(){const q=document.getElementById('searchInput')?.value?.trim()||'';location.href=(document.body.dataset.root||'')+'arguments.html'+(q?'?q='+encodeURIComponent(q):'')}
-const SUPPORT_CONFIG={donationOnceUrl:'',donationMonthlyUrl:'',rewardedAdsEnabled:false,rewardedAdUnitPath:''};
-function openDonation(type,amount){const url=type==='monthly'?SUPPORT_CONFIG.donationMonthlyUrl:SUPPORT_CONFIG.donationOnceUrl;if(!url){toast('Paiement pas encore connecté : aucun argent ne sera envoyé.');return}const u=new URL(url,location.href);if(amount&&amount!=='libre')u.searchParams.set('amount',amount);window.open(u.toString(),'_blank','noopener')}
+const SUPPORT_CONFIG={donationOnceUrl:'https://ko-fi.com/sourcestudio',donationMonthlyUrl:'https://ko-fi.com/sourcestudio',rewardedAdsEnabled:false,rewardedAdUnitPath:''};
+function openDonation(type,amount){const url=type==='monthly'?SUPPORT_CONFIG.donationMonthlyUrl:SUPPORT_CONFIG.donationOnceUrl;if(!url){toast('Lien de soutien indisponible.');return}window.open(url,'_blank','noopener')}
 let rewardTimer=null;
 function supportAdClick(){if(!SUPPORT_CONFIG.rewardedAdsEnabled){startRewardedDemo();return}const c=readConsent();if(!c?.ads){openCookieSettings();toast('La publicité réelle nécessite d’abord ton choix de consentement.');return}toast('Emplacement prêt : connecter ici le SDK de la régie avec l’identifiant réel.')}
 function startRewardedDemo(){if(rewardTimer)return;const status=document.getElementById('rewardStatus'),bar=document.getElementById('rewardProgress'),btn=document.getElementById('rewardButton');let n=0;if(btn)btn.disabled=true;if(status)status.textContent='DÉMO uniquement — 12 secondes, aucun revenu généré.';rewardTimer=setInterval(()=>{n++;if(bar)bar.style.width=(n/12*100)+'%';if(status)status.textContent=n<12?`DÉMO • ${12-n} s restantes — aucune vraie publicité`:'Démo terminée. Merci pour le geste !';if(n>=12){clearInterval(rewardTimer);rewardTimer=null;if(btn){btn.disabled=false;btn.textContent='Relancer la démo'}}},1000)}
