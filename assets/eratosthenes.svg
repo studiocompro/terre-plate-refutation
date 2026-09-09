@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="t d">
+<title id="t">Schéma original de l'expérience d'Ératosthène</title><desc id="d">Deux villes avec des bâtons verticaux reçoivent des rayons solaires parallèles. L'écart d'angle permet d'estimer la circonférence terrestre.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071426"/><stop offset="1" stop-color="#102c3d"/></linearGradient><radialGradient id="earth"><stop stop-color="#43d9c1"/><stop offset=".56" stop-color="#197d94"/><stop offset="1" stop-color="#0c314d"/></radialGradient></defs>
+<rect width="900" height="520" rx="32" fill="url(#bg)"/>
+<circle cx="460" cy="640" r="340" fill="url(#earth)" stroke="#78f7e0" stroke-opacity=".45" stroke-width="4"/>
+<g stroke="#ffe78c" stroke-width="5" stroke-linecap="round" opacity=".95"><path d="M70 70 L335 285"/><path d="M120 40 L385 255"/><path d="M170 20 L435 235"/></g>
+<g fill="#eafcff" stroke="#eafcff"><rect x="330" y="240" width="10" height="95" rx="4" transform="rotate(-18 335 287)"/><rect x="555" y="238" width="10" height="96" rx="4" transform="rotate(18 560 286)"/></g>
+<g fill="none" stroke="#ff9f68" stroke-width="4"><path d="M338 273 A70 70 0 0 1 381 250"/><path d="M559 270 A70 70 0 0 0 516 248"/></g>
+<g font-family="Arial, sans-serif" fill="#f7fbff"><text x="52" y="66" font-size="28" font-weight="700">Deux villes, le même Soleil</text><text x="52" y="102" font-size="18" fill="#9fb2c7">Les rayons sont pratiquement parallèles à l'échelle de la Terre.</text><text x="250" y="370" font-size="18">Ville A</text><text x="585" y="370" font-size="18">Ville B</text><text x="332" y="226" font-size="20" fill="#ffb78e">angle α</text><text x="505" y="220" font-size="20" fill="#ffb78e">angle β</text><text x="277" y="438" font-size="20" font-weight="700" fill="#8fffe1">différence d'angle + distance entre les villes → taille de la Terre</text></g>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "name": "Terre plate — réfutation mondiale",
+  "short_name": "Réfutation Terre plate",
+  "lang": "fr",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#050816",
+  "description": "Arguments, expériences et sources scientifiques expliqués simplement.",
+  "icons": []
+}
