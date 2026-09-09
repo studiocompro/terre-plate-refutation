@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Ajouter Sitemap: https://votre-domaine.tld/sitemap.xml après choix du domaine.
+Sitemap: https://terre-plate-refutation.pages.dev/sitemap.xml
